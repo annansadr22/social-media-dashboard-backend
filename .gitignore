@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environment
+venv/
+.env
+.env.*
+
+# Environment variable files
+*.env
+
+# VS Code / IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+
+# macOS / Linux system files
+.DS_Store
+*.swp
+*.swo
+
+# Database / local state
+*.db
+*.sqlite3
+
+# Python package files
+dist/
+build/
+*.egg-info/
+
+# Alembic migration cache
+alembic/versions/__pycache__/
+
+# Coverage and test reports
+htmlcov/
+.coverage
+coverage.xml
+.pytest_cache/
+
+# Render deployment build artifacts
+.render-build/
