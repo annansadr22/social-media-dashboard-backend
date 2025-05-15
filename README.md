@@ -46,7 +46,7 @@ To run this FastAPI project on your own machine:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/social-media-dashboard.git
+git clone https://github.com/annansadr22/social-media-dashboard-backend.git
 cd social-media-dashboard
 ```
 
