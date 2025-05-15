@@ -12,7 +12,6 @@ A backend-powered social media analytics and management system built with **Fast
 - 📝 Create, Update, Delete Posts  
 - 📊 Mock Analytics for Posts (views, likes, comments)  
 - 🔍 Filter Posts by Date, Keyword, or User  
-- 🧾 Booking history and audit log (optional)  
 - ⚙️ Admin Panel to manage users and content  
 - 🌐 Deployed on Render (or your preferred cloud provider)  
 
@@ -33,7 +32,7 @@ A backend-powered social media analytics and management system built with **Fast
 
 My app is already running on the cloud.  
 👉 **Try this URL**:  
-[https://social-media-dashboard-backend-pwn9.onrender.com/docs] 
+[https://social-media-dashboard-backend-pwn9.onrender.com/docs](https://social-media-dashboard-backend-pwn9.onrender.com/docs) 
 
 This link opens the **inbuilt FastAPI Swagger UI** — an interactive documentation interface where you can explore and test all available endpoints directly from your browser.
 
@@ -74,12 +73,14 @@ SECRET_KEY=your_secret_key
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 ```
+Replace with your database connection string and also generate a good secret key
 
 ### 5. Run Database Migrations
 
 ```bash
 alembic upgrade head
 ```
+Run this so that your models get saved into your database
 
 ### 6. Start the FastAPI App
 
@@ -101,6 +102,8 @@ Now visit [http://localhost:8000/docs](http://localhost:8000/docs) to use the sa
 | POST   | /posts             | Create a post           |
 | GET    | /analytics/{id}    | View analytics for post |
 | GET    | /posts/filter      | Filter posts by query   |
+
+These are some of the sample API Endpoints. You can explore more.
 
 ---
 
@@ -130,18 +133,6 @@ To deploy on [Render](https://render.com/):
 3. Add required environment variables from `.env`  
 4. Connect to PostgreSQL via Render dashboard  
 5. Done 🎉
-
----
-
-## 📎 License
-
-MIT License. Free to use and modify.
-
----
-
-## 🤝 Contribution
-
-Feel free to fork, raise issues, or submit PRs. Let’s build better dashboards together!
 
 ---
 
