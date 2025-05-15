@@ -40,6 +40,115 @@ This link opens the **inbuilt FastAPI Swagger UI** — an interactive documentat
 
 ---
 
+## 💻 Run This Project Locally
+
+To run this FastAPI project on your own machine:
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/social-media-dashboard.git
+cd social-media-dashboard
+```
+
+### 2. Create & Activate a Virtual Environment
+
+```bash
+python -m venv venv
+source venv/bin/activate         # On Windows: venv\Scripts\activate
+```
+
+### 3. Install the Requirements
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Configure Environment Variables
+
+Create a `.env` file in the root directory and add:
+
+```env
+DATABASE_URL=postgresql://your_user:your_password@localhost/your_db_name
+SECRET_KEY=your_secret_key
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+```
+
+### 5. Run Database Migrations
+
+```bash
+alembic upgrade head
+```
+
+### 6. Start the FastAPI App
+
+```bash
+uvicorn app.main:app --reload
+```
+
+Now visit [http://localhost:8000/docs](http://localhost:8000/docs) to use the same Swagger UI locally.
+
+---
+
+## 📬 API Endpoints (Sample)
+
+| Method | Endpoint           | Description             |
+|--------|--------------------|-------------------------|
+| POST   | /register          | Register a new user     |
+| POST   | /login             | Login and get JWT token |
+| GET    | /posts             | Get all posts           |
+| POST   | /posts             | Create a post           |
+| GET    | /analytics/{id}    | View analytics for post |
+| GET    | /posts/filter      | Filter posts by query   |
+
+---
+
+## 🔐 Authentication
+
+- JWT tokens are used for securing API access.
+- After login, send the token via:  
+  `Authorization: Bearer <your_token_here>`
+
+---
+
+## 🧪 Testing
+
+You can test the APIs using:
+
+- 🛠 [Postman](https://www.postman.com/)
+- 🌐 Swagger UI at `http://localhost:8000/docs`
+
+---
+
+## 🌍 Deployment (Render)
+
+To deploy on [Render](https://render.com/):
+
+1. Push code to GitHub  
+2. Create a new web service on Render  
+3. Add required environment variables from `.env`  
+4. Connect to PostgreSQL via Render dashboard  
+5. Done 🎉
+
+---
+
+## 📎 License
+
+MIT License. Free to use and modify.
+
+---
+
+## 🤝 Contribution
+
+Feel free to fork, raise issues, or submit PRs. Let’s build better dashboards together!
+
+---
+
+## 🙌 Acknowledgements
+
+Thanks to **FastAPI**, **SQLAlchemy**, and all open-source contributors who made this stack awesome.
+
 
 
 
